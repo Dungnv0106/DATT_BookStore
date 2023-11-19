@@ -93,7 +93,7 @@
                 <div class="content-item--image relative text-center">
                     <a class="" href="index.php?act=detail_pro&pro_id=<?php echo $pro['pro_id'] ?>">
                         <img title="<?php echo $pro['pro_name'] ?>" 
-                            class="w-full rounded-md bg-clip-padding bg-gray-200 duration-500 hover:scale-x-105 hover:scale-y-105" 
+                            class="w-full h-[220px] rounded-md bg-clip-padding bg-gray-200 duration-500 hover:scale-x-105 hover:scale-y-105" 
                             src="<?php echo substr($pro['pro_image'], 3); ?>" alt="No Image"
                         >
                     </a>

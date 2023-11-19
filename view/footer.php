@@ -151,8 +151,9 @@
             <a href="index.php">
                 <img class="logo" class="w-[150px]" src="./asset/images/logo.webp" alt="">
             </a>
-            <p>GENCE là thương hiệu phụ kiện đồ da công sở cao cấp lấy điểm nhấn từ sự sang trọng, lịch sự hết sức gần
-                gũi với vóc dáng của người Việt Nam.</p>
+            <p>
+            Gặp được một quyển sách hay nên mua liền dù đọc được hay không đọc được, vì sớm muộn gì cũng cần đến nó
+            </p>
         </div>
         <div class="col">
             <h3>Office <div class="underline"><span></span></div>
@@ -168,7 +169,6 @@
             </h3>
             <ul>
                 <li><a href="">Home</a></li>
-                <li><a href="">Services</a></li>
                 <li><a href="">About Us</a></li>
                 <li><a href="">Products</a></li>
                 <li><a href="">Introduce</a></li>
@@ -192,7 +192,6 @@
         </div>
     </div>
     <hr class="w-[90%] mx-auto my-[20px]">
-    <p class="text-center">Công Ty TNHH Thương Mại và Sản Xuất Gence</p>
 </footer>
 </div>
 <!-- End .container-->

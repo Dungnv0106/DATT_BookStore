@@ -64,36 +64,33 @@ if (isset($_SESSION['user'])) {
 </style>
 
 
-<div class="banner relative min-h-[700px] w-full">
+<div class="banner relative min-h-[700px] ">
     <!-- <button class="absolute top-1/2" onclick="prev()">
         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#DCDCDC" class="hover:fill-[#363636] bi bi-arrow-left-circle " viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
         </svg>
     </button> -->
-    <div class="slideshow">
-        <img id="anh" src="./asset/images/banner/banner1.jpg" alt="">
-        <img id="anh" src="./asset/images/banner/banner2.jpg" alt="">
+    <div class="slideshow mx-auto ">
+        <!-- <img id="anh" src="./asset/images/banner/banner1.jpg" alt=""> -->
+        <!-- <img id="anh" src="./asset/images/banner/banner2.jpg" alt=""> -->
+        <img class="w-full" src="./asset/images/banner/anhdep.jpg" alt="">
     </div>
 
-    <!-- <button class="absolute top-1/2 right-0" onclick="next()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#DCDCDC" class="hover:fill-[#363636] bi bi-arrow-right-circle" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-        </svg>
-    </button> -->
 </div>
 <!-- End .banner-->
 <div class="w-5/6 mx-auto space-y-2     ">
     <p class="text-[25px]">ABOUT</p>
-    <p class="text-[45px]">
+    <!-- <p class="text-[45px]">
         GENCE - GENTLEMAN’S OFFICE
-    </p>
+    </p> -->
     <p class="text-[#4F4F4F] leading-8">
-        GENCE là thương hiệu phụ kiện đồ da công sở cao cấp lấy điểm nhấn từ sự sang trọng, lịch sự hết sức gần gũi với
-        vóc dáng của người Việt Nam.
-        Những sản phẩm cặp da, túi da, clutch… được chính bàn tay, khối óc của người thợ Việt Nam có tay nghề cao, tâm
-        huyết, tỉ mỉ trong từng công đoạn sản xuất.
-        Kỹ thuật dựng form dáng và sản xuất theo đúng trình tự tiêu chuẩn vô cùng chặt chẽ, chuyên nghiệp để tạo ra
-        những sản phẩm “Made in Viet Nam” chất lượng.
+    Trong thời buổi kinh tế đang ngày càng bão hòa và khó khăn, 
+    thì việc tạo dựng sự nghiệp thành công cho bản thân mỗi người là điều không dễ dàng gì. 
+    Không phải là bạn cứ có kiến thức hay nhiều tiền là sẽ trở nên giàu có ngay lập tức, 
+    tất cả điều cần có bí quyết và một lộ trình đi đến thành công một cách đúng hướng.
+    Sách không chỉ là nguồn tri thức vô tận đối với mỗi người mà ngày càng có nhiều minh 
+    chứng khoa học cho thấy những tác động rất tốt của việc đọc sách đối với sự phát triển 
+    cả về thể chất lẫn trí tuệ và tâm hồn của trẻ.
     </p>
     <div class="">
         <a href="index.php?act=list_product " class="border mt-4 inline-block text-[#FFFFFF] bg-[#000] px-7 py-4">
@@ -103,14 +100,14 @@ if (isset($_SESSION['user'])) {
 </div>
 
 <div class="category w-5/6 mx-auto min-h-[340px] mt-20 space-y-8">
-    <p class="text-3xl text-center italic  ">DANH MỤC SẢN PHẨM </p>
+    <p class="text-3xl text-center italic  ">DANH MỤC SÁCH </p>
     <div class="grid grid-cols-4 gap-6">
         <?php
         foreach ($get_four_cate as $cate) {
             ?>
             <div class="item relative hover:drop-shadow-2xl">
-                <a class="" href="index.php?act=list_product&cate_id=<?php echo $cate['cate_id'] ?>">
-                    <img class="absolute hover:scale-110 transition-transform duration-700 ease-in-out"
+                <a class="border border-red-500" href="index.php?act=list_product&cate_id=<?php echo $cate['cate_id'] ?>">
+                    <img class="absolute border w-[250px] h-[250px] hover:scale-110 transition-transform duration-700 ease-in-out"
                         src="<?php echo substr($cate['cate_image'], 3); ?>" alt="">
                     <p class="absolute top-[190px] left-[10px] text-[22px] text-[#FFFFFF]">
                         <?php echo $cate['cate_name'] ?>
@@ -127,7 +124,7 @@ if (isset($_SESSION['user'])) {
 <!-- End .category -->
 
 <div class="p_shop w-5/6 mx-auto mt-10 text-center text-2xl ">
-    <p class="text-3xl text-center italic  ">GENCE - THỜI TRANG CÔNG SỞ</p>
+    <p class="text-3xl text-center italic  ">GENCE - Đời Sống Sách</p>
 </div> <!-- End .p_shop-->
 
 <section class="content w-full px-2 mt-8 mx-auto mb-10">
@@ -137,7 +134,7 @@ if (isset($_SESSION['user'])) {
                 <div class="content-item--image relative text-center">
                     <a class="" href="index.php?act=detail_pro&pro_id=<?php echo $pro['pro_id'] ?>">
                         <img title="<?php echo $pro['pro_name'] ?>"
-                            class="w-full rounded-md bg-clip-padding bg-gray-200 duration-500 hover:scale-x-105 hover:scale-y-105"
+                            class="w-full h-[300px] rounded-md bg-clip-padding bg-gray-200 duration-500 hover:scale-x-105 hover:scale-y-105"
                             src="<?php echo substr($pro['pro_image'], 3); ?>" alt="No Image">
                     </a>
                     <a class="view-detail absolute mx-auto text-center"
@@ -194,7 +191,7 @@ if (isset($_SESSION['user'])) {
     </div> 
     <!-- End grid-->
     <section class="w-[90%] mx-auto mt-16">
-        <div class="grid grid-cols-2 gap-8">
+        <!-- <div class="grid grid-cols-2 gap-8">
             <div class="item text-center space-y-4">
                 <a href="">
                     <img src="./asset/images/home_image/featured_coll_2_1_img.webp" alt="">
@@ -220,42 +217,41 @@ if (isset($_SESSION['user'])) {
         </div>
         <div class="store-bg my-16">
             <img src="./asset/images/home_image/section_store_bg.webp" alt="">
-        </div>
+        </div> -->
         <!-- End .grid -->
-    </section>
-    <section class="shipping w-[90%] mx-auto bg-[#f9f9f9] py-[100px] mb-[100px]">
-        <div class="grid grid-cols-4 gap-8 ">
-            <div class="icon text-center space-y-2 ">
+    </section> 
+    <!-- <section class="shipping w-[90%] mx-auto bg-[#f9f9f9] py-[100px] mb-[100px]"> -->
+        <!-- <div class="grid grid-cols-4 gap-8 "> -->
+            <!-- <div class="icon text-center space-y-2 ">
                 <img class="ml-[100px]" src="./asset/icon/shipping/truck.svg" alt="">
                 <p>
                     MIỄN PHÍ VẬN CHUYỂN
                 </p>
-            </div>
+            </div> -->
             <!-- End .icon -->
-            <div class="icon text-center space-y-2 ">
+            <!-- <div class="icon text-center space-y-2 ">
                 <img class="ml-[100px]" src="./asset/icon/shipping/box-arrow-left.svg" alt="">
                 <p>
                    ĐỔI TRẢ HÀNG TRONG 10 NGÀY
                 </p>
-            </div>
+            </div> -->
             <!-- End .icon -->
-            <div class="icon text-center space-y-2">
+            <!-- <div class="icon text-center space-y-2">
                 <img class="ml-[100px]" src="./asset/icon/shipping/box-seam.svg" alt="">
                 <p>
                     GÓI QUÀ MIỄN PHÍ
                 </p>
-            </div>
+            </div> -->
             <!-- End .icon -->
-            <div class="icon text-center space-y-2">
+            <!-- <div class="icon text-center space-y-2">
                 <img class="ml-[100px]" src="./asset/icon/shipping/telephone.svg" alt="">
                 <p>
                     HOTLINE: 0393.900.328
                 </p>
-            </div>
+            </div> -->
             <!-- End .icon -->
-
-        </div>
-    </section>
+        <!-- </div> -->
+    <!-- </section> -->
 </section> <!-- End .content-->
 
 <script>
